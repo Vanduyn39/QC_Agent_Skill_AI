@@ -38,6 +38,14 @@ To avoid Google's storage limits (Quota Exceeded errors) for the Service Account
 
 ---
 
+## 🌱 How to Add a New Project
+This system is highly scalable. If you want to use it for a new project, you **do not need to change any code**. Just follow these 3 simple steps:
+1. **Duplicate Folders:** Duplicate an existing project folder in both `assets/` and `references/`.
+2. **Rename:** Rename those duplicated folders to your new project's name (e.g., `assets/Project_X` and `references/Project_X`). Replace the old guidelines with the new project's rules.
+3. **Create a new Google Sheet:** Create a new file on your Google Drive named `Project_X` and share Editor access with the Service Account email (just like step 2 in the Setup Guide). 
+
+---
+
 ## 📂 Folder Structure
 ```text
 QC_Agent_Skill/
