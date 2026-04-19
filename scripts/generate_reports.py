@@ -133,28 +133,15 @@ def get_project_report(project_name: str, mode: str = "daily", start_date: str =
             if data_series.empty:
                 ax.axis('off')
                 return
-            
-            # Khai báo một mảng các màu pastel tươi sáng và khác biệt nhau
-            color_palette = [
-                '#8DD3C7', '#FFFFB3', '#BEBADA', '#FB8072', 
-                '#80B1D3', '#FDB462', '#B3DE69', '#FCCDE5', 
-                '#D9D9D9', '#BC80BD', '#CCEBC5', '#FFED6F'
-            ]
-            
-            # Tự động chọn màu từ mảng trên, lặp lại nếu số lượng Module nhiều hơn 12
-            bar_colors = [color_palette[i % len(color_palette)] for i in range(len(data_series))]
-            
-            # Vẽ cột với danh sách màu vừa tạo (color=bar_colors)
+            bar_colors = [plt.cm.Set3.colors[i % len(plt.cm.Set3.colors)] for i in range(len(data_series))]
             bars = ax.bar(data_series.index, data_series.values, color=bar_colors, edgecolor='black', alpha=0.9)
             ax.set_title(title, fontsize=14, fontweight='bold', pad=15)
             ax.set_ylabel("Number of Bugs", fontweight='bold')
             
-            # Xoay tên các module nghiêng 45 độ để không bị đè lên nhau
             ax.tick_params(axis='x', rotation=45)
             for tick in ax.get_xticklabels():
                 tick.set_horizontalalignment('right')
                 
-            # Ghi số lượng bug ở đỉnh từng cột
             for bar in bars:
                 yval = bar.get_height()
                 ax.text(bar.get_x() + bar.get_width()/2, yval + 0.1, int(yval), ha='center', va='bottom', fontweight='bold')
@@ -163,27 +150,21 @@ def get_project_report(project_name: str, mode: str = "daily", start_date: str =
         for i, (col_name, chart_name) in enumerate(charts_to_draw):
             if col_name in df_filtered.columns:
                 counts = df_filtered[col_name].value_counts()
-                
-                # NẾU LÀ MODULE THÌ GỌI HÀM VẼ CỘT, CÒN LẠI VẼ TRÒN
                 if col_name == "Module":
                     draw_bar_chart(axes[i], counts, chart_name)
                 else:
                     draw_pie_chart(axes[i], counts, chart_name)
             else:
                 axes[i].axis('off')
-
-        # Tắt (ẩn) các ô trống không dùng đến trong khung 2x3
         for j in range(len(charts_to_draw), len(axes)):
             axes[j].axis('off')
 
         plt.tight_layout()
         
-        # Lưu file
         chart_path = f"{output_dir}/{chart_filename}"
         plt.savefig(chart_path, dpi=150, bbox_inches='tight')
         plt.close()
 
-        # Tổng hợp dữ liệu trả về cho AI (để nó phân tích bằng text)
         stats = {
             "total_bugs": len(df_filtered),
             "by_module": df_filtered['Module'].value_counts().to_dict() if 'Module' in df.columns else {},
