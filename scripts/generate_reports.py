@@ -133,8 +133,19 @@ def get_project_report(project_name: str, mode: str = "daily", start_date: str =
             if data_series.empty:
                 ax.axis('off')
                 return
-            # Vẽ cột màu xanh nhã nhặn
-            bars = ax.bar(data_series.index, data_series.values, color='#4A90E2', edgecolor='black', alpha=0.8)
+            
+            # Khai báo một mảng các màu pastel tươi sáng và khác biệt nhau
+            color_palette = [
+                '#8DD3C7', '#FFFFB3', '#BEBADA', '#FB8072', 
+                '#80B1D3', '#FDB462', '#B3DE69', '#FCCDE5', 
+                '#D9D9D9', '#BC80BD', '#CCEBC5', '#FFED6F'
+            ]
+            
+            # Tự động chọn màu từ mảng trên, lặp lại nếu số lượng Module nhiều hơn 12
+            bar_colors = [color_palette[i % len(color_palette)] for i in range(len(data_series))]
+            
+            # Vẽ cột với danh sách màu vừa tạo (color=bar_colors)
+            bars = ax.bar(data_series.index, data_series.values, color=bar_colors, edgecolor='black', alpha=0.9)
             ax.set_title(title, fontsize=14, fontweight='bold', pad=15)
             ax.set_ylabel("Number of Bugs", fontweight='bold')
             
