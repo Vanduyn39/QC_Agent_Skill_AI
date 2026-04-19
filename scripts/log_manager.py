@@ -4,9 +4,9 @@ from datetime import datetime
 from sheet_logger import GoogleSheetManager # Import Manager mới
 
 BUG_COLUMNS = [
-    "Fixed Build Version", "Module", "Defect Name(sumary)", "Description", 
+    "Environment","Platform","Fixed Build Version", "Module", "Defect Name(sumary)", "Description", 
     "Expect", "Actual Result", "Type", "Severity", "Priority", "Status", 
-    "Attachments", "Reported By", "DEV", "Date", "Note"
+    "Attachments", "Reported By", "DEV", "Date","Root Cause", "Note"
 ]
 
 TC_COLUMNS = [

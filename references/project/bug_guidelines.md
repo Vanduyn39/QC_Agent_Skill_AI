@@ -17,26 +17,26 @@ Tài liệu này quy định các tiêu chí để hệ thống hóa quy trình 
 ## 2. DEFECT BY SEVERITY (Mức độ nghiêm trọng)
 *Đánh giá dựa trên tác động của lỗi đối với tính năng và khả năng vận hành của phần mềm.*
 
-| Cấp độ | Tên (Level) | Mô tả chi tiết |
-| :--- | :--- | :--- |
-| **S1** | **Blocking** | Lỗi làm tê liệt hoàn toàn hệ thống hoặc chức năng chính. Không có cách khắc phục tạm thời (workaround). Ngăn cản việc kiểm thử các phần liên quan. |
-| **S2** | **Important** | Lỗi ảnh hưởng nặng nề đến các tính năng cốt lõi. Người dùng không thể hoàn thành luồng nghiệp vụ chính (Critical Path). |
-| **S3** | **Moderate** | Lỗi gây mất chức năng nhưng có cách xử lý tạm thời (workaround). Ảnh hưởng đến trải nghiệm nhưng không làm gián đoạn hoàn toàn quy trình. |
-| **S4** | **Low** | Lỗi nhỏ về giao diện (UI) hoặc các tính năng phụ, không ảnh hưởng đến logic nghiệp vụ. |
-| **S5** | **Very Low** | Các lỗi cực nhỏ, lỗi chính tả, hoặc các đề xuất cải thiện thẩm mỹ mang tính cá nhân. |
+| Cấp độ | Mô tả chi tiết |
+| :--- | :--- |
+| **Blocking** | Lỗi làm tê liệt hoàn toàn hệ thống hoặc chức năng chính. Không có cách khắc phục tạm thời (workaround). Ngăn cản việc kiểm thử các phần liên quan. |
+| **Important** | Lỗi ảnh hưởng nặng nề đến các tính năng cốt lõi. Người dùng không thể hoàn thành luồng nghiệp vụ chính (Critical Path). |
+| **Moderate** | Lỗi gây mất chức năng nhưng có cách xử lý tạm thời (workaround). Ảnh hưởng đến trải nghiệm nhưng không làm gián đoạn hoàn toàn quy trình. |
+| **Low** | Lỗi nhỏ về giao diện (UI) hoặc các tính năng phụ, không ảnh hưởng đến logic nghiệp vụ. |
+| **Very Low** | Các lỗi cực nhỏ, lỗi chính tả, hoặc các đề xuất cải thiện thẩm mỹ mang tính cá nhân. |
 
 ---
 
 ## 3. DEFECT BY PRIORITY (Mức độ ưu tiên)
 *Đánh giá dựa trên mức độ khẩn cấp cần được sửa chữa.*
 
-| Cấp độ | Tên (Level) | Thời hạn xử lý dự kiến |
-| :--- | :--- | :--- |
-| **P1** | **Urgent** | **Sửa ngay lập tức.** Thường xử lý trong vòng vài giờ hoặc trong ngày. Lỗi chặn đứng tiến độ team hoặc gây thiệt hại trực tiếp. |
-| **P2** | **High** | **Ưu tiên cao.** Cần được giải quyết trong Sprint hiện tại hoặc trước kỳ phát hành (Release) kế tiếp. |
-| **P3** | **Normal** | **Xử lý bình thường.** Sắp xếp sửa sau khi các lỗi quan trọng đã hoàn tất. Có thể chờ đến các bản cập nhật định kỳ. |
-| **P4** | **Low** | **Ưu tiên thấp.** Sửa khi có thời gian trống, không ảnh hưởng đến kế hoạch Release chính. |
-| **P5** | **Very Low** | **Cân nhắc sửa.** Thường là các lỗi thẩm mỹ hoặc mong muốn cải tiến (Suggestion) sẽ xử lý khi nguồn lực dư dả. |
+| Cấp độ | Thời hạn xử lý dự kiến |
+| :--- | :--- |
+| **Urgent** | **Sửa ngay lập tức.** Thường xử lý trong vòng vài giờ hoặc trong ngày. Lỗi chặn đứng tiến độ team hoặc gây thiệt hại trực tiếp. |
+| **High** | **Ưu tiên cao.** Cần được giải quyết trong Sprint hiện tại hoặc trước kỳ phát hành (Release) kế tiếp. |
+| **Normal** | **Xử lý bình thường.** Sắp xếp sửa sau khi các lỗi quan trọng đã hoàn tất. Có thể chờ đến các bản cập nhật định kỳ. |
+| **Low** | **Ưu tiên thấp.** Sửa khi có thời gian trống, không ảnh hưởng đến kế hoạch Release chính. |
+| **Very Low** | **Cân nhắc sửa.** Thường là các lỗi thẩm mỹ hoặc mong muốn cải tiến (Suggestion) sẽ xử lý khi nguồn lực dư dả. |
 
 ---
 

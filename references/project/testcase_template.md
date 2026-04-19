@@ -17,8 +17,8 @@
 
 | TC ID | Tiêu đề Test Case (Title) | Phân loại | Mức độ ưu tiên (Priority) |
 | :--- | :--- | :--- | :--- |
-| `TC_001` | [Mô tả ngắn gọn TC 1] | `Positive` / `Negative` | `P1` - `P5` |
-| `TC_002` | [Mô tả ngắn gọn TC 2] | `Positive` / `Negative` | `P1` - `P5` |
+| `TC_001` | [Mô tả ngắn gọn TC 1] | `Positive` / `Negative` | `Urgent` - `Very Low` |
+| `TC_002` | [Mô tả ngắn gọn TC 2] | `Positive` / `Negative` | `Urgent` - `Very Low` |
 *(AI tự động sinh thêm các dòng tương ứng với số lượng Test Case được tạo)*
 
 ---
@@ -28,7 +28,7 @@
 ### `TC_001`: [Tiêu đề Test Case - Ví dụ: Đăng nhập thành công với tài khoản hợp lệ]
 * **Mục tiêu (Objective):** Kiểm tra xem hệ thống xử lý như thế nào khi [điều kiện test].
 * **Loại (Type):** `Positive` / `Negative`
-* **Severity (Độ nghiêm trọng):** `S1` - `S5` (Dựa trên ma trận Defect)
+* **Severity (Độ nghiêm trọng):** `Blocking` - `Very Low` (Dựa trên ma trận Defect)
 * **Điều kiện tiên quyết (Pre-conditions):**
   * [Điều kiện 1 cần có trước khi test, ví dụ: Tài khoản đã được kích hoạt]
   * [Điều kiện 2]
@@ -48,7 +48,7 @@
 ### `TC_002`: [Tiêu đề Test Case 2 - Ví dụ: Báo lỗi khi để trống trường bắt buộc]
 * **Mục tiêu (Objective):** [Mô tả mục tiêu]
 * **Loại (Type):** `Negative`
-* **Severity (Độ nghiêm trọng):** `S2` - `S5`
+* **Severity (Độ nghiêm trọng):** `Blocking` - `Very Low`
 * **Điều kiện tiên quyết (Pre-conditions):**
   * [Điều kiện...]
 * **Dữ liệu test (Test Data):**

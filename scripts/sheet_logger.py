@@ -49,9 +49,9 @@ class GoogleSheetManager:
             
             # Tự động chèn Header tùy theo loại Log
             if sheet_name == "Bugs":
-                headers = ["Fixed Build Version", "Module", "Defect Name(sumary)", "Description", "Expect", "Actual Result", "Type", "Severity", "Priority", "Status", "Attachments", "Reported By", "DEV", "Date", "Note"]
+                headers = ["Environment", "Platform", "Fixed Build Version", "Module", "Defect Name(sumary)", "Description", "Expect", "Actual Result", "Type", "Severity", "Priority", "Status", "Attachments", "Reported By", "DEV", "Date","Root Cause", "Note"]
                 worksheet.append_row(headers)
-            elif sheet_name == "TestCases":
+            elif sheet_name == "TestCases": 
                 headers = ["Test Case ID", "Title", "Module", "Type", "Priority", "Pre-condition", "Steps", "Expected", "Actual", "Status", "Date", "Note"]
                 worksheet.append_row(headers)
                 
