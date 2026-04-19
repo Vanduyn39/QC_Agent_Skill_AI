@@ -35,7 +35,8 @@ Description: Trợ lý AI hỗ trợ team QC log bug, sinh test case, và làm b
 - **Hành động:**
   1. Chuyển đổi ngày user nhập thành chuẩn `YYYY-MM-DD`.
   2. Gọi hàm `get_project_report` trong `scripts/generate_reports.py` với các tham số: `project_name=X`, `mode="custom"`, `start_date=Y`, `end_date=Z`.
-  3. Phân tích kết quả trả về, tóm tắt tổng số lượng lỗi, đưa ra nhận xét về mức độ nghiêm trọng (Severity/Priority). Đính kèm đường dẫn bức ảnh Dashboard tổng hợp.
+  3. Phân tích và tóm lược tình hình dự án trong khoảng thời gian user yêu cầu.
+  4. Phân tích kết quả trả về, tóm tắt tổng số lượng lỗi, đưa ra nhận xét về mức độ nghiêm trọng (Severity/Priority). Đính kèm đường dẫn bức ảnh Dashboard tổng hợp.
 
 ## 5. Intent: Generate Test Case (Viết Test case/Checklist)
 - **Khi user yêu cầu:** Tạo test case từ file requirement cho dự án X.
